@@ -8,74 +8,84 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "task_details")
 public class Task {
-  @Id
-  // @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long taskId;
-  
-  @Column(name = "taskHolderName")
-  private String taskHolderName;
-  
-  @Column(name = "taskDate")
-  private String taskDate;
-  
-  @Column(name = "taskName")
-  private String taskName;
-  
-  @Column(name = "taskStatus")
-  private String taskStatus;
+    @Id
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long taskId;
 
+    @Column(name = "taskHolderName")
+    private String taskHolderName;
 
-  public Task(){
+    @Column(name = "taskDate")
+    private String taskDate;
 
-  }
+    @Column(name = "taskName")
+    private String taskName;
 
+    @Column(name = "taskStatus")
+    private String taskStatus;
 
-  public Task(long taskId, String taskHolderName, String taskDate, String taskName, String taskStatus) {
-    this.taskId = taskId;
-    this.taskHolderName = taskHolderName;
-    this.taskDate = taskDate;
-    this.taskName = taskName;
-    this.taskStatus = taskStatus;
-  }
+    @Column(name = "houseNo")
+    private String houseNo;
 
+    public Task() {
 
-  public long getTaskId() {
-    return this.taskId;
-  }
+    }
 
-  public void setTaskId(long taskId) {
-    this.taskId = taskId;
-  }
+    public Task(long taskId, String taskHolderName, String taskDate, String taskName, String taskStatus,
+            String houseNo) {
+        this.taskId = taskId;
+        this.taskHolderName = taskHolderName;
+        this.taskDate = taskDate;
+        this.taskName = taskName;
+        this.taskStatus = taskStatus;
+        this.houseNo = houseNo;
+    }
 
-  public String getTaskHolderName() {
-    return this.taskHolderName;
-  }
+    public long getTaskId() {
+        return this.taskId;
+    }
 
-  public void setTaskHolderName(String taskHolderName) {
-    this.taskHolderName = taskHolderName;
-  }
+    public void setTaskId(long taskId) {
+        this.taskId = taskId;
+    }
 
-  public String getTaskDate() {
-    return this.taskDate;
-  }
+    public String getTaskHolderName() {
+        return this.taskHolderName;
+    }
 
-  public void setTaskDate(String taskDate) {
-    this.taskDate = taskDate;
-  }
+    public void setTaskHolderName(String taskHolderName) {
+        this.taskHolderName = taskHolderName;
+    }
 
-  public String getTaskName() {
-    return this.taskName;
-  }
+    public String getTaskDate() {
+        return this.taskDate;
+    }
 
-  public void setTaskName(String taskName) {
-    this.taskName = taskName;
-  }
+    public void setTaskDate(String taskDate) {
+        this.taskDate = taskDate;
+    }
 
-  public String getTaskStatus() {
-    return this.taskStatus;
-  }
+    public String getTaskName() {
+        return this.taskName;
+    }
 
-  public void setTaskStatus(String taskStatus) {
-    this.taskStatus = taskStatus;
-  }
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    public void setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+    }
+
+    public String getHouseNo() {
+        return this.houseNo;
+    }
+
+    public void setHouseNo(String houseNo) {
+        this.houseNo = houseNo;
+    }
 }
